@@ -16,7 +16,8 @@ import { createHash } from 'crypto';
 class GeminiAPIAdapter implements AIClient {
   name = 'gemini-api';
   private apiKey: string;
-  private baseUrl = 'https://aiplatform.googleapis.com/v1/publishers/google/models';
+  private baseUrl = 'https://generativelanguage.googleapis.com/v1/models';
+
 
   constructor(apiKey?: string) {
     this.apiKey = apiKey || process.env.GEMINI_API_KEY || '';
